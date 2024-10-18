@@ -1,0 +1,13 @@
+
+mat-toolbar {
+  position: fixed;
+  bottom: 0;            /* sets it to the bottom */
+  width: 100%;
+  display: flex;         /* Use flexbox for centering */
+  justify-content: center; /* Horizontally center the content */
+  align-items: center;     /* Vertically center if needed */
+}
+
+.mat-caption {
+  text-align: center;
+}
