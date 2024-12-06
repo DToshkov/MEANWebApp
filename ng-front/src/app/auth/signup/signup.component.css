@@ -1,0 +1,24 @@
+mat-card {
+  /*position: relative;*/
+  /*left: 30px;*/
+  /*border: 3px solid #73AD21;*/
+
+  width: 60%;
+  margin:5px;
+}
+
+form {
+  /*position: absolute;*/
+  width: 50%;
+  margin: auto;
+  display: grid;
+}
+
+button{
+  width: 20%;
+  margin: 5px;
+
+}
+textarea {
+  width: 100%;
+}

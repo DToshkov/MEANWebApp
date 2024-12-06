@@ -17,7 +17,11 @@ import {MatPaginatorModule} from "@angular/material/paginator";
 import { CreatePostComponent } from './posts/create-post/create-post.component';
 import { PostListComponent } from './posts/post-list/post-list.component';
 import {CommonModule} from "@angular/common";
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import { LoginComponent } from './auth/login/login.component';
+import { SignupComponent } from './auth/signup/signup.component';
+import {AuthInterceptor} from "./auth/auth-interceptor";
 
 
 
@@ -29,26 +33,29 @@ import {HttpClientModule} from "@angular/common/http";
     FooterComponent,
     CreatePostComponent,
     PostListComponent,
+    LoginComponent,
+    SignupComponent,
 
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatToolbarModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatInputModule,
-    FormsModule,
-    BrowserAnimationsModule,
-    MatExpansionModule,
-    CommonModule,
-    MatPaginatorModule,
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        MatButtonModule,
+        MatToolbarModule,
+        MatCardModule,
+        MatFormFieldModule,
+        MatInputModule,
+        FormsModule,
+        BrowserAnimationsModule,
+        MatExpansionModule,
+        CommonModule,
+        MatPaginatorModule,
+        MatProgressSpinnerModule,
 
-  ],
-  providers: [],
+    ],
+  providers: [{provide: HTTP_INTERCEPTORS, useClass:AuthInterceptor, multi:true}], //{provide: HTTP_INTERCEPTORS}
   bootstrap: [AppComponent]
 })
 export class AppModule { }
