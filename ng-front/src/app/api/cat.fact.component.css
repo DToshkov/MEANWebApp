@@ -1,0 +1,20 @@
+.cat-container {
+  margin: auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  max-width: 400px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cat-container h1 {
+  color: #710193;
+}
+
+.cat-container p {
+  font-size: 16px;
+  color: #555;
+}

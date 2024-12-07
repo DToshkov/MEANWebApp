@@ -1,0 +1,11 @@
+<div class="cat-container">
+  <h1>Random Cat Fact</h1>
+  <p *ngIf="cat.fact; else noFact">
+    <strong>{{ cat.fact }}</strong>
+    <br />
+    <em>Fact length: {{ cat.length }}</em>
+  </p>
+  <ng-template #noFact>
+    <p>Loading a random cat fact...</p>
+  </ng-template>
+</div>

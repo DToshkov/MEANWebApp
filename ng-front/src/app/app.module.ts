@@ -22,7 +22,7 @@ import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import {AuthInterceptor} from "./auth/auth-interceptor";
-
+import { CatComponent } from './api/cat.fact.component';
 
 
 
@@ -36,25 +36,27 @@ import {AuthInterceptor} from "./auth/auth-interceptor";
     LoginComponent,
     SignupComponent,
 
-  ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        HttpClientModule,
-        BrowserAnimationsModule,
-        MatButtonModule,
-        MatToolbarModule,
-        MatCardModule,
-        MatFormFieldModule,
-        MatInputModule,
-        FormsModule,
-        BrowserAnimationsModule,
-        MatExpansionModule,
-        CommonModule,
-        MatPaginatorModule,
-        MatProgressSpinnerModule,
 
-    ],
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MatExpansionModule,
+    CommonModule,
+    MatPaginatorModule,
+    MatProgressSpinnerModule,
+    CatComponent,
+
+  ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass:AuthInterceptor, multi:true}], //{provide: HTTP_INTERCEPTORS}
   bootstrap: [AppComponent]
 })
